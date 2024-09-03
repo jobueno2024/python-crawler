@@ -1,0 +1,10 @@
+version: '3'
+services:
+  website:
+    build: ./website
+    ports:
+      - "5000:5000"
+  crawler:
+    build: ./crawler
+    depends_on:
+      - website
